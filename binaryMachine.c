@@ -1,0 +1,118 @@
+#include <stdio.h>
+#include <string.h>
+#include <stdlib.h>
+
+void bits_print(char *bits) {
+    
+}
+
+#define SS_00100001 '!'  // !
+#define SS_00100010 '"'  // "
+#define SS_00111011 ';'  // ;
+#define SS_00100011 '#'  // #
+#define SS_00100100 '$'  // $
+#define SS_00100101 '%'  // %
+#define SS_00100110 '&'  // &
+#define SS_00100111 '\'' // '
+#define SS_00101000 '('  // (
+#define SS_00101001 ')'  // )
+#define SS_01111011 '{'  // {
+#define SS_01111101 '}'  // }
+#define SS_01011011 '['  // [
+#define SS_01011101 ']'  // ]
+#define SS_00101010 '*'  // *
+#define SS_00101011 '+'  // +
+#define SS_00101100 ','  // ,
+#define SS_00101101 '-'  // -
+#define SS_00101110 '.'  // .
+#define SS_00101111 '/'  // /
+#define SS_00111101 '='  // =
+#define SS_00100000 ' '  // SPACE
+
+#define DIGIT_00110000 '0'  // 0
+#define DIGIT_00110001 '1'  // 1
+#define DIGIT_00110010 '2'  // 2
+#define DIGIT_00110011 '3'  // 3
+#define DIGIT_00110100 '4'  // 4
+#define DIGIT_00110101 '5'  // 5
+#define DIGIT_00110110 '6'  // 6
+#define DIGIT_00110111 '7'  // 7
+#define DIGIT_00111000 '8'  // 8
+#define DIGIT_00111001 '9'  // 9
+
+#define BIN_01000001 'A'  // A - 01000001
+#define BIN_01000010 'B'  // B - 01000010
+#define BIN_01000011 'C'  // C - 01000011
+#define BIN_01000100 'D'  // D - 01000100
+#define BIN_01000101 'E'  // E - 01000101
+#define BIN_01000110 'F'  // F - 01000110
+#define BIN_01000111 'G'  // G - 01000111
+#define BIN_01001000 'H'  // H - 01001000
+#define BIN_01001001 'I'  // I - 01001001
+#define BIN_01001010 'J'  // J - 01001010
+#define BIN_01001011 'K'  // K - 01001011
+#define BIN_01001100 'L'  // L - 01001100
+#define BIN_01001101 'M'  // M - 01001101
+#define BIN_01001110 'N'  // N - 01001110
+#define BIN_01001111 'O'  // O - 01001111
+#define BIN_01010000 'P'  // P - 01010000
+#define BIN_01010001 'Q'  // Q - 01010001
+#define BIN_01010010 'R'  // R - 01010010
+#define BIN_01010011 'S'  // S - 01010011
+#define BIN_01010100 'T'  // T - 01010100
+#define BIN_01010101 'U'  // U - 01010101
+#define BIN_01010110 'V'  // V - 01010110
+#define BIN_01010111 'W'  // W - 01010111
+#define BIN_01011000 'X'  // X - 01011000
+#define BIN_01011001 'Y'  // Y - 01011001
+#define BIN_01011010 'Z'  // Z - 01011010
+
+#define RAW_01100001 'a'  // a - 01100001
+#define RAW_01100010 'b'  // b - 01100010
+#define RAW_01100011 'c'  // c - 01100011
+#define RAW_01100100 'd'  // d - 01100100
+#define RAW_01100101 'e'  // e - 01100101
+#define RAW_01100110 'f'  // f - 01100110
+#define RAW_01100111 'g'  // g - 01100111
+#define RAW_01101000 'h'  // h - 01101000
+#define RAW_01101001 'i'  // i - 01101001
+#define RAW_01101010 'j'  // j - 01101010
+#define RAW_01101011 'k'  // k - 01101011
+#define RAW_01101100 'l'  // l - 01101100
+#define RAW_01101101 'm'  // m - 01101101
+#define RAW_01101110 'n'  // n - 01101110
+#define RAW_01101111 'o'  // o - 01101111
+#define RAW_01110000 'p'  // p - 01110000
+#define RAW_01110001 'q'  // q - 01110001
+#define RAW_01110010 'r'  // r - 01110010
+#define RAW_01110011 's'  // s - 01110011
+#define RAW_01110100 't'  // t - 01110100
+#define RAW_01110101 'u'  // u - 01110101
+#define RAW_01110110 'v'  // v - 01110110
+#define RAW_01110111 'w'  // w - 01110111
+#define RAW_01111000 'x'  // x - 01111000
+#define RAW_01111001 'y'  // y - 01111001
+#define RAW_01111010 'z'  // z - 01111010
+
+RAW_01101001 RAW_01101110 RAW_01110100 RAW_01101101 RAW_01100001 RAW_01101001 RAW_01101110 SS_00101000 SS_00101001 SS_01111011
+    RAW_01100011 RAW_01101000 RAW_01100001 RAW_01110010 RAW_01101101 RAW_01110011 RAW_01100111 SS_01011011 SS_01011101 SS_00111101 SS_01111011
+        BIN_01010000 SS_00101100
+        RAW_01110010 SS_00101100
+        RAW_01101001 SS_00101100
+        RAW_01110110 SS_00101100
+        RAW_01100101 SS_00101100
+        RAW_01110100 SS_00101100
+        SS_00101100 SS_00101100
+        SS_00100000 SS_00101100
+        RAW_01101101 SS_00101100
+        RAW_01101001 SS_00101100
+        RAW_01110010 SS_00101100
+        SS_00100001 SS_00101100
+        DIGIT_00110000
+    SS_01111101 SS_00111011
+    RAW_01110000 RAW_01110010 RAW_01101001 RAW_01101110 RAW_01110100 RAW_01100110 "SS_00100101 RAW_01110011 SS_00100111 RAW_01101110"SS_00101100 RAW_01101101 RAW_01110011 RAW_01100111 SS_00101001 SS_00111011
+    
+    RAW_01110010 RAW_01100101 RAW_01110100 RAW_01110101 RAW_01110010 RAW_01101110 DIGIT_00110000 SS_00111011
+SS_01111101
+
+///// I HAVE ERROR, YEAH, BUT THIS IS JUST TEST VERSION BY 13 Y.O MAN!
